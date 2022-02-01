@@ -19,6 +19,9 @@ Module BetterCalculator
         Dim operationSelect As Double
         Dim userInput As String
         Dim exitt As Boolean = False
+        Dim menu As String
+
+        menu = "1. Add" & vbNewLine & "2. Subtract" & vbNewLine & "3. Multiply" & vbNewLine & "4. Divide"
 
         Do Until exitt = True
             Console.WriteLine("Please enter two numbers. Enter 'Q' at any time to quit.")
@@ -64,10 +67,8 @@ Module BetterCalculator
                 Loop
                 If exitt <> True Then
                     Console.WriteLine("Choose one of the following options:")
-                    Console.WriteLine("1. Add")
-                    Console.WriteLine("2. Subtract")
-                    Console.WriteLine("3. Multiply")
-                    Console.WriteLine("4. Divide")
+                    Console.WriteLine(menu)
+
 
                     Do While choice = False
                         Try
@@ -92,10 +93,8 @@ Module BetterCalculator
                             Else
                                 choice = False
                                 Console.WriteLine("Choose one of the following options:")
-                                Console.WriteLine("1. Add")
-                                Console.WriteLine("2. Subtract")
-                                Console.WriteLine("3. Multiply")
-                                Console.WriteLine("4. Divide")
+                                Console.WriteLine(menu)
+
                             End If
 
                         Catch ex As Exception
@@ -105,10 +104,7 @@ Module BetterCalculator
                             Else
                                 choice = False
                                 Console.WriteLine("Choose one of the following options:")
-                                Console.WriteLine("1. Add")
-                                Console.WriteLine("2. Subtract")
-                                Console.WriteLine("3. Multiply")
-                                Console.WriteLine("4. Divide")
+                                Console.WriteLine(menu)
                             End If
                         End Try
                     Loop
